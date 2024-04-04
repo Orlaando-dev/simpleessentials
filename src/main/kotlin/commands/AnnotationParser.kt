@@ -25,7 +25,7 @@ class AnnotationParser (
     }
 
     private fun setupExamples() {
-        FEATURES.forEach(Consumer<AnnotationFeature> { feature: AnnotationFeature ->
+        FEATURES.forEach(Consumer { feature: AnnotationFeature ->
             feature.registerFeature(
                 this.main,
                 annotationParser
