@@ -9,7 +9,7 @@ import org.incendo.cloud.annotations.AnnotationParser
  */
 interface AnnotationFeature {
     fun registerFeature(
-        examplePlugin: Main,
+        main: Main,
         annotationParser: AnnotationParser<CommandSender?>
     )
 }
