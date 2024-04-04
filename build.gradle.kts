@@ -21,6 +21,9 @@ dependencies {
     // For Kotlin coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
 
+    //OkHttp
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
     // Adventure API for modern chat components
     compileOnly("net.kyori:adventure-api:4.14.0")
     compileOnly("net.kyori:adventure-platform-bukkit:4.3.2")

@@ -1,12 +1,11 @@
 package commands
 
 import Main
-import commands.util.GiveCommand
+import commands.util.PingCommand
 import org.bukkit.command.CommandSender
 import org.incendo.cloud.CommandManager
 import org.incendo.cloud.annotations.AnnotationParser
 import java.util.*
-import java.util.function.Consumer
 
 class AnnotationParser (
     main: Main,
@@ -25,17 +24,17 @@ class AnnotationParser (
     }
 
     private fun setupExamples() {
-        FEATURES.forEach(Consumer { feature: AnnotationFeature ->
+        FEATURES.forEach { feature ->
             feature.registerFeature(
                 this.main,
                 annotationParser
             )
-        })
+        }
     }
 
     companion object {
         private val FEATURES: List<AnnotationFeature> = Arrays.asList<AnnotationFeature>(
-            GiveCommand()
+            PingCommand()
         )
     }
 }

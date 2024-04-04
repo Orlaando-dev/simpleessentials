@@ -6,10 +6,10 @@ import org.incendo.cloud.bukkit.CloudBukkitCapabilities
 import org.incendo.cloud.execution.ExecutionCoordinator
 import org.incendo.cloud.paper.PaperCommandManager;
 
-class Main: JavaPlugin() {
+class Main : JavaPlugin() {
 
     override fun onEnable() {
-        val manager: PaperCommandManager<CommandSender> = PaperCommandManager(
+        val manager = PaperCommandManager(
             this,
             ExecutionCoordinator.simpleCoordinator(),
             SenderMapper.identity()
